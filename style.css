@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+}
+header {
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: black;
+      width: 120px;
+      height: 100px;
+      border-radius: 10px;
+      position: relative;
+      transition: all 0.5s;
+      div {
+        svg {
+          width: 35px;
+          height: 35px;
+        }
+        p {
+          font-size: 10px;
+          text-align: center;
+        }
+      }
+      span {
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        background-color: black;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        transform: scaleY(0);
+        transition: all 0.5s;
+        transform-origin: top;
+      }
+      span:nth-child(4) {
+        left: 25%;
+        transition-delay: 0.15s;
+      }
+      span:nth-child(5) {
+        left: 50%;
+        transition-delay: 0.3s;
+      }
+      span:nth-child(6) {
+        left: 75%;
+        transition-delay: 0.45s;
+      }
+    }
+    a:hover span {
+      transform: scaleY(1);
+    }
+    a:hover {
+      color: white;
+      fill: white;
+    }
+  }
+}
