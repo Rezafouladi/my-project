@@ -20,6 +20,14 @@ header {
     padding: 10px;
     width: 1300px;
     margin: 0 auto;
+    > h1 {
+      transition: all 0.5s;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    > h1:hover {
+      box-shadow: 3px 2px 2px 3px rgb(67, 67, 67);
+    }
     a {
       display: flex;
       justify-content: center;
@@ -28,7 +36,6 @@ header {
       color: black;
       width: 120px;
       height: 100px;
-      border-radius: 10px;
       position: relative;
       transition: all 0.5s;
       div {
@@ -80,25 +87,96 @@ main {
   .container {
     width: 1300px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    > div {
-      > h1 {
-        color: white;
-        text-align: center;
+    > #first-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      > div {
+        > h1 {
+          color: white;
+          text-align: center;
+        }
+        > p {
+          color: white;
+          padding: 20px 0;
+          letter-spacing: 2px;
+        }
       }
-      > p {
-        color: white;
-        padding: 20px 0;
-        letter-spacing: 2px;
+      > img {
+        width: 500px;
+        border-radius: 20px;
+        margin-bottom: 30px;
+        transition: all 0.5s;
+      }
+      > img:hover {
+        box-shadow: 0 0 5px 8px rgb(108, 108, 108);
       }
     }
-    > img {
-      width: 500px;
-      border-radius: 20px;
-      margin-bottom: 30px;
+    #second-section {
+      display: flex;
+      justify-content: center;
+
+      > a {
+        margin-bottom: 30px;
+        text-decoration: none;
+        position: relative;
+        padding: 10px;
+        transition: all 0.5s;
+        text-transform: uppercase;
+        .project-shop {
+          border: 1px solid white;
+          padding: 20px;
+          width: 150px;
+          border-radius: 10px;
+          text-align: center;
+          margin: 10px;
+          h2 {
+            color: white;
+          }
+          > svg {
+            width: 100px;
+            height: 100px;
+            fill: rgb(252, 255, 255);
+          }
+        }
+      }
+      > a::before {
+        content: "";
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgb(255, 253, 253);
+        border-width: 0 0 3px 3px;
+        border-radius: 3px;
+        opacity: 0;
+        transition: all 0.5s;
+      }
+      > a:hover::before{
+        opacity: 1;
+        left: -8px;
+        bottom: -8px;
+      }
+      > a::after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgb(255, 253, 253);
+        border-width: 3px 3px 0 0;
+        border-radius: 3px;
+        opacity: 0;
+        transition: all 0.5s;
+      }
+      > a:hover::after{
+        top: -8px;
+        right: -8px;
+        opacity: 1;
+      }
     }
   }
 }

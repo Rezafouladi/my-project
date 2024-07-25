@@ -1,0 +1,8 @@
+p{
+    padding: 10px;
+    font-size: 30px;
+    > a{
+        text-decoration: none;
+        color: rgb(80, 80, 80);
+    }
+}
